@@ -1,5 +1,4 @@
 import { Component, VERSION } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'my-app',
@@ -8,10 +7,9 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   name = 'RamazanM';
-  constructor(private primengConfig: PrimeNGConfig){}
+  constructor(){}
 
   ngOnInit(){
-    this.primengConfig.ripple=true
   }
 }
 
