@@ -1,4 +1,2 @@
 /* Add application styles & imports to this file! */
-@import 'primeicons/primeicons.css';
-@import 'primeng/resources/primeng.min.css';
-@import 'primeng/resources/themes/lara-dark-blue/theme.css';
+@import 'custom-style.css';
