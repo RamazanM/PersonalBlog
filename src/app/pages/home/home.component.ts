@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faAddressCard, faBlog, faImage, faRss,faTeletype } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -9,11 +9,7 @@ import { faAddressCard, faBlog, faImage, faRss,faTeletype } from '@fortawesome/f
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-  icons = {
-    blog: faTeletype,
-    photos: faImage,
-    cv: faAddressCard,
-  };
+
 
   ngOnInit() {}
 }
