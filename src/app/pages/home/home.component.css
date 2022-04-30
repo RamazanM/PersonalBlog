@@ -1,14 +1,36 @@
-.cards {
+:host {
   display: flex;
-  margin-top: 40vh;
+  justify-content: center;
+}
+
+.cards {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .card {
-  width: 20vh;
-  height: 20vh;
+  transition-duration: 250ms;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30vh;
+  height: 30vh;
   background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
-  border-radius: 50px;
-  box-shadow:  -10px -10px 30px #bebebe,
-               10px 10px 30px #ffffff;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 100%);
+  border-radius: 30px;
+  box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
+  -webkit-box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
+  -moz-box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
+}
+.card:hover{
+  box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
+  -webkit-box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
+  -moz-box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
+}
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
