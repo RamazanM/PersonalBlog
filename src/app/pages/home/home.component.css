@@ -18,19 +18,25 @@
   justify-content: center;
   width: 30vh;
   height: 30vh;
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #04619f 100%);
-  border-radius: 30px;
-  box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
-  -webkit-box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
-  -moz-box-shadow: 10px 10px 22px -5px rgba(4, 97, 159, 0.75);
+  border-radius: 50px;
+  background: #f2e9e4;
+  box-shadow: 20px 20px 60px #cec6c2, -20px -20px 60px #ffffff;
 }
-.card:hover{
-  box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
-  -webkit-box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
-  -moz-box-shadow: 3px 3px 22px -5px rgba(4, 97, 159, 0.75);
+.card:hover {
+  border-radius: 50px;
+  background: #f2e9e4;
+  box-shadow: -20px -20px 60px #cec6c2, 20px 20px 60px #ffffff;
 }
 .icon {
   font-size: 40px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  .cards {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
