@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 var routes: Routes = [
   {
@@ -15,7 +16,12 @@ var routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    FontAwesomeModule,
+  ],
   declarations: [AppComponent, HeaderComponent, HomeComponent],
   bootstrap: [AppComponent],
 })
