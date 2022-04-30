@@ -7,7 +7,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 .card {
   transition-duration: 250ms;
@@ -16,8 +16,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30vh;
-  height: 30vh;
+  width: 20vh;
+  height: 20vh;
+  margin: 3vh;
   border-radius: 50px;
   background: #f2e9e4;
   box-shadow: 20px 20px 60px #cec6c2, -20px -20px 60px #ffffff;
@@ -27,8 +28,8 @@
   background: #f2e9e4;
   box-shadow: -20px -20px 60px #cec6c2, 20px 20px 60px #ffffff;
 }
-.icon {
-  font-size: 40px;
+.icon > img {
+  width: 50px;
   margin-bottom: 10px;
 }
 
@@ -37,6 +38,9 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  .card {
+    margin: 5vh;
   }
 }
