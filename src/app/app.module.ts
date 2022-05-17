@@ -10,6 +10,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { DashboardComponent } from './admin/pages/dashboard/dashboard.component';
+import { AdminSidebarComponent } from './admin/components/admin-sidebar/admin-sidebar.component';
 
 var routes: Routes = [
   {
@@ -36,6 +37,11 @@ var routes: Routes = [
         component: DashboardComponent,
       },
     ],
+  },
+  {
+    path: 'admin',
+    component: AdminSidebarComponent,
+    outlet: 'sidebar',
   },
 ];
 
