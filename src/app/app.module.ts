@@ -15,6 +15,7 @@ import { AdminPhotosComponent } from './admin/pages/admin-photos/admin-photos.co
 import { AdminBlogComponent } from './admin/pages/admin-blog/admin-blog.component';
 import { AdminCvComponent } from './admin/pages/admin-cv/admin-cv.component';
 import { AdminSettingsComponent } from './admin/pages/admin-settings/admin-settings.component';
+import { CommonModule } from '@angular/common';
 
 var routes: Routes = [
   {
@@ -34,6 +35,11 @@ var routes: Routes = [
     component: CvComponent,
   },
   {
+    path: '',
+    component: AdminSidebarComponent,
+    outlet: 'sidebar',
+  },
+  {
     path: 'admin',
     children: [
       {
@@ -46,28 +52,37 @@ var routes: Routes = [
         outlet: 'sidebar',
       },
       {
-        path:'photos',
-        component:AdminPhotosComponent
+        path: 'photos',
+        component: AdminPhotosComponent,
       },
       {
-        path:'blog',
-        component:AdminBlogComponent
+        path: 'blog',
+        component: AdminBlogComponent,
       },
       {
-        path:'cv',
-        component:AdminCvComponent
+        path: 'cv',
+        component: AdminCvComponent,
       },
       {
-        path:'settings',
-        component:AdminSettingsComponent
-      }
+        path: 'settings',
+        component: AdminSettingsComponent,
+      },
     ],
   },
 ];
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    AdminBlogComponent,
+    AdminCvComponent,
+    AdminPhotosComponent,
+    AdminSettingsComponent,
+    AdminSidebarComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
