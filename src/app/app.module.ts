@@ -11,6 +11,10 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { DashboardComponent } from './admin/pages/dashboard/dashboard.component';
 import { AdminSidebarComponent } from './admin/components/admin-sidebar/admin-sidebar.component';
+import { AdminPhotosComponent } from './admin/pages/admin-photos/admin-photos.component';
+import { AdminBlogComponent } from './admin/pages/admin-blog/admin-blog.component';
+import { AdminCvComponent } from './admin/pages/admin-cv/admin-cv.component';
+import { AdminSettingsComponent } from './admin/pages/admin-settings/admin-settings.component';
 
 var routes: Routes = [
   {
@@ -36,12 +40,28 @@ var routes: Routes = [
         path: '',
         component: DashboardComponent,
       },
+      {
+        path: '',
+        component: AdminSidebarComponent,
+        outlet: 'sidebar',
+      },
+      {
+        path:'photos',
+        component:AdminPhotosComponent
+      },
+      {
+        path:'blog',
+        component:AdminBlogComponent
+      },
+      {
+        path:'cv',
+        component:AdminCvComponent
+      },
+      {
+        path:'settings',
+        component:AdminSettingsComponent
+      }
     ],
-  },
-  {
-    path: 'admin',
-    component: AdminSidebarComponent,
-    outlet: 'sidebar',
   },
 ];
 
