@@ -1,4 +1,5 @@
 <div class="blog-entry" *ngFor="let item of data">
+  <img [src]="item.poster" />
   <h1>{{ item.title }}</h1>
   <p>{{ item.content.slice(0, 200) + '...' }}</p>
 </div>
