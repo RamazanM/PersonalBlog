@@ -35,11 +35,6 @@ var routes: Routes = [
     component: CvComponent,
   },
   {
-    path: '',
-    component: AdminSidebarComponent,
-    outlet: 'sidebar',
-  },
-  {
     path: 'admin',
     children: [
       {
