@@ -15,6 +15,10 @@ import { AdminPhotosComponent } from './admin/pages/admin-photos/admin-photos.co
 import { AdminBlogComponent } from './admin/pages/admin-blog/admin-blog.component';
 import { AdminCvComponent } from './admin/pages/admin-cv/admin-cv.component';
 import { AdminSettingsComponent } from './admin/pages/admin-settings/admin-settings.component';
+import { DummyDataService } from './services/dummy-data.service';
+import { Post } from './models/post';
+import { CV } from './models/cv';
+import { Image } from './models/image';
 import { CommonModule } from '@angular/common';
 
 var routes: Routes = [
@@ -67,7 +71,7 @@ var routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
+  imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes), FormsModule],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -77,7 +81,9 @@ var routes: Routes = [
     AdminPhotosComponent,
     AdminSettingsComponent,
     AdminSidebarComponent,
+
   ],
   bootstrap: [AppComponent],
+  providers: [DummyDataService],
 })
 export class AppModule {}
