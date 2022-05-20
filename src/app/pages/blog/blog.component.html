@@ -1,4 +1,4 @@
-test
-<div *ngFor="let item of data">
-  {{ item.title }}
+<div class="blog-entry" *ngFor="let item of data">
+  <h1>{{ item.title }}</h1>
+  <p>{{ item.content.slice(0, 200) + '...' }}</p>
 </div>

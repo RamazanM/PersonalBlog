@@ -71,17 +71,24 @@ var routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes), FormsModule],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    BlogComponent,
+    CvComponent,
+    PhotosComponent,
     AdminBlogComponent,
     AdminCvComponent,
     AdminPhotosComponent,
     AdminSettingsComponent,
     AdminSidebarComponent,
-
   ],
   bootstrap: [AppComponent],
   providers: [DummyDataService],
