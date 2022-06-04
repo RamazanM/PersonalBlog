@@ -20,6 +20,7 @@ import { Post } from './models/post';
 import { CV } from './models/cv';
 import { Image } from './models/image';
 import { CommonModule } from '@angular/common';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 var routes: Routes = [
   {
@@ -76,6 +77,7 @@ var routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    NgxDatatableModule,
   ],
   declarations: [
     AppComponent,
