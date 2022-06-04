@@ -4,8 +4,25 @@
     #blogTable
     [rows]="rows"
     [columns]="columns"
-    class="material"
+    [headerHeight]="50"
+    [rowHeight]="50"
+    class="material table"
     height="100%"
   >
+    <ngx-datatable-column name="Title"></ngx-datatable-column>
+    <ngx-datatable-column name="content"></ngx-datatable-column>
+    <ngx-datatable-column name="poster"></ngx-datatable-column>
+    <ngx-datatable-column name="createDate"></ngx-datatable-column>
+    <ngx-datatable-column name="publishDate"></ngx-datatable-column>
+
+    <ngx-datatable-column name="Id" title="Test">
+      <ng-template let-column="column" ngx-datatable-header-template>
+        Operations
+      </ng-template>
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button (click)="edit(value)">Edit</button>
+        <button (click)="remove(value)">Remove</button>
+      </ng-template>
+    </ngx-datatable-column>
   </ngx-datatable>
 </div>

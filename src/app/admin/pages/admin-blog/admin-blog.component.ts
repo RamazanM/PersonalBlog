@@ -1,23 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../../../models/post';
+import { DummyDataService } from '../../../services/dummy-data.service';
 
 @Component({
   selector: 'app-admin-blog',
   templateUrl: './admin-blog.component.html',
-  styleUrls: ['./admin-blog.component.css']
+  styleUrls: ['./admin-blog.component.css'],
 })
 export class AdminBlogComponent implements OnInit {
-
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' }
+  rows = [];
+  columns = [
+    { name: 'id' },
+    { name: 'title' },
+    { name: 'content' },
+    { name: 'createDate' },
+    { name: 'publishDate' },
   ];
-  columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
-  
-  constructor() { }
+
+  constructor(private apiService: DummyDataService) {}
 
   ngOnInit() {
+    this.apiService.getAllPosts().then((data) => (this.rows = data));
   }
 
-
+  edit(id) {
+    alert('Editing:' + id);
+  }
+  remove(id) {
+    alert('removing:' + id);
+  }
 }
