@@ -21,6 +21,7 @@ import { CV } from './models/cv';
 import { Image } from './models/image';
 import { CommonModule } from '@angular/common';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 var routes: Routes = [
   {
@@ -78,6 +79,7 @@ var routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     NgxDatatableModule,
+    FontAwesomeModule
   ],
   declarations: [
     AppComponent,

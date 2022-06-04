@@ -20,8 +20,9 @@
         Operations
       </ng-template>
       <ng-template let-value="value" ngx-datatable-cell-template>
-        <button (click)="edit(value)">Edit</button>
-        <button (click)="remove(value)">Remove</button>
+        <fa-icon [icon]="faEdit" (click)="edit(value)"></fa-icon>
+        &nbsp;
+        <fa-icon [icon]="faRemove" (click)="remove(value)"></fa-icon>
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
