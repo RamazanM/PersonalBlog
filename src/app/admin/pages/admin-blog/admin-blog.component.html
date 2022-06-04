@@ -1,4 +1,10 @@
 <p>admin-blog works</p>
+<ngx-fab
+  [backgroundColor]="'#88B04B'"
+  [iconClass]="'fas fa-plus'"
+  [position]="'middle-right'"
+  (click)="add()"
+></ngx-fab>
 <div>
   <ngx-datatable
     #blogTable

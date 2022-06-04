@@ -34,4 +34,7 @@ export class AdminBlogComponent implements OnInit {
   remove(id) {
     alert('removing:' + id);
   }
+  add(){
+    alert("add")
+  }
 }
