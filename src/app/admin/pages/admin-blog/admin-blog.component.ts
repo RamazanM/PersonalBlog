@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../../../models/post';
 import { DummyDataService } from '../../../services/dummy-data.service';
-import { faRemove,faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faRemove, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-admin-blog',
@@ -9,9 +8,8 @@ import { faRemove,faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./admin-blog.component.css'],
 })
 export class AdminBlogComponent implements OnInit {
-
   faRemove = faRemove;
-  faEdit=faEdit
+  faEdit = faEdit;
 
   rows = [];
   columns = [
@@ -34,7 +32,7 @@ export class AdminBlogComponent implements OnInit {
   remove(id) {
     alert('removing:' + id);
   }
-  add(){
-    alert("add")
+  add() {
+    alert('add');
   }
 }
