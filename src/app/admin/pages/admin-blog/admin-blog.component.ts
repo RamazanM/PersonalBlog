@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DummyDataService } from '../../../services/dummy-data.service';
 import { faRemove, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { NgxSmartModalService } from 'ngx-smart-modal';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-admin-blog',
@@ -15,7 +14,6 @@ export class AdminBlogComponent implements OnInit {
   faEdit = faEdit;
   public Editor = ClassicEditor;
 
-
   rows = [];
   columns = [
     { name: 'id' },
@@ -25,7 +23,10 @@ export class AdminBlogComponent implements OnInit {
     { name: 'publishDate' },
   ];
 
-  constructor(private apiService: DummyDataService,public ngxSmartModalService: NgxSmartModalService) {}
+  constructor(
+    private apiService: DummyDataService,
+    public ngxSmartModalService: NgxSmartModalService
+  ) {}
 
   ngOnInit() {
     this.apiService.getAllPosts().then((data) => (this.rows = data));
