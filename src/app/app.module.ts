@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxFabModule } from 'ngx-fab';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 var routes: Routes = [
   {
@@ -81,7 +82,8 @@ var routes: Routes = [
     FormsModule,
     NgxDatatableModule,
     FontAwesomeModule,
-    NgxFabModule
+    NgxFabModule,
+    NgxSmartModalModule.forRoot(),
   ],
   declarations: [
     AppComponent,

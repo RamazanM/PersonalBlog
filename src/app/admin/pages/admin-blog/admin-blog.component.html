@@ -3,8 +3,14 @@
   [backgroundColor]="'#88B04B'"
   [iconClass]="'fas fa-plus'"
   [position]="'middle-right'"
-  (click)="add()"
+  (click)="ngxSmartModalService.getModal('myModal').open()"
 ></ngx-fab>
+<ngx-smart-modal #myModal identifier="myModal">
+<h1>Title</h1>
+<p>Some stuff...</p>
+
+<button (click)="myModal.close()">Close</button>
+</ngx-smart-modal>
 <div>
   <ngx-datatable
     #blogTable
