@@ -1,7 +1,14 @@
-<ul class="sidebar">
-  <li routerLink="/admin">Dashboard</li>
-  <li routerLink="/admin/blog">Blog</li>
-  <li routerLink="/admin/cv">Cv</li>
-  <li routerLink="/admin/photos">Photos</li>
-  <li routerLink="/admin/settings">Settings</li>
-</ul>
+<div class="sidebar-container">
+  <ul class="sidebar" *ngIf="!hidden">
+    <li routerLink="/admin">Dashboard</li>
+    <li routerLink="/admin/blog">Blog</li>
+    <li routerLink="/admin/cv">Cv</li>
+    <li routerLink="/admin/photos">Photos</li>
+    <li routerLink="/admin/settings">Settings</li>
+  </ul>
+  <fa-icon
+    class="toggle-icon"
+    [icon]="hidden ? rightIcon : leftIcon"
+    (click)="toggle()"
+  ></fa-icon>
+</div>

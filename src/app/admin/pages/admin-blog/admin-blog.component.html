@@ -1,4 +1,3 @@
-<p>admin-blog works</p>
 <ngx-fab
   [backgroundColor]="'#88B04B'"
   [iconClass]="'fas fa-plus'"
@@ -6,11 +5,12 @@
   (click)="ngxSmartModalService.getModal('myModal').open()"
 ></ngx-fab>
 <ngx-smart-modal #myModal identifier="myModal">
-<h1>Title</h1>
-<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
-<button (click)="myModal.close()">Close</button>
+  <h1>Title</h1>
+  <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+  <button (click)="myModal.close()">Close</button>
 </ngx-smart-modal>
-<div>
+<div class="table-container">
+  <h1 class="title">Blog Posts</h1>
   <ngx-datatable
     #blogTable
     [rows]="rows"
@@ -22,13 +22,11 @@
   >
     <ngx-datatable-column name="Title"></ngx-datatable-column>
     <ngx-datatable-column name="content"></ngx-datatable-column>
-    <ngx-datatable-column name="poster"></ngx-datatable-column>
-    <ngx-datatable-column name="createDate"></ngx-datatable-column>
     <ngx-datatable-column name="publishDate"></ngx-datatable-column>
 
-    <ngx-datatable-column name="Id" title="Test">
+    <ngx-datatable-column name="Id" title="Test" [sortable]="false">
       <ng-template let-column="column" ngx-datatable-header-template>
-        Operations
+        <fa-icon [icon]="faEdit"></fa-icon>
       </ng-template>
       <ng-template let-value="value" ngx-datatable-cell-template>
         <fa-icon [icon]="faEdit" (click)="edit(value)"></fa-icon>
