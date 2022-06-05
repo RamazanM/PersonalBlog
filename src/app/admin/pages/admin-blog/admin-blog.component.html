@@ -7,8 +7,7 @@
 ></ngx-fab>
 <ngx-smart-modal #myModal identifier="myModal">
 <h1>Title</h1>
-<p>Some stuff...</p>
-
+<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
 <button (click)="myModal.close()">Close</button>
 </ngx-smart-modal>
 <div>

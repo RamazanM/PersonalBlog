@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DummyDataService } from '../../../services/dummy-data.service';
 import { faRemove, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 @Component({
   selector: 'app-admin-blog',
@@ -11,6 +13,8 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 export class AdminBlogComponent implements OnInit {
   faRemove = faRemove;
   faEdit = faEdit;
+  public Editor = ClassicEditor;
+
 
   rows = [];
   columns = [

@@ -16,14 +16,12 @@ import { AdminBlogComponent } from './admin/pages/admin-blog/admin-blog.componen
 import { AdminCvComponent } from './admin/pages/admin-cv/admin-cv.component';
 import { AdminSettingsComponent } from './admin/pages/admin-settings/admin-settings.component';
 import { DummyDataService } from './services/dummy-data.service';
-import { Post } from './models/post';
-import { CV } from './models/cv';
-import { Image } from './models/image';
 import { CommonModule } from '@angular/common';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxFabModule } from 'ngx-fab';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 var routes: Routes = [
   {
@@ -84,6 +82,7 @@ var routes: Routes = [
     FontAwesomeModule,
     NgxFabModule,
     NgxSmartModalModule.forRoot(),
+    CKEditorModule,
   ],
   declarations: [
     AppComponent,
